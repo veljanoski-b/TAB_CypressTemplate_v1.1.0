@@ -1,0 +1,24 @@
+{
+  "defaultCommandTimeout": 5000,
+  "chromeWebSecurity": false,
+  "fixturesFolder": "cypress/fixtures",
+  "videosFolder": "cypress/report/videos",
+  "supportFile": "cypress/support/index.js",
+  "pluginsFile": "cypress/plugins/index.js",
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "*.js",
+  "video": false,
+  "viewportWidth": 1440,
+  "viewportHeight": 1020,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/report/screenshots",
+  "trashAssetsBeforeRuns": true,
+  "numTestsKeptInMemory": 10,
+  "env": {
+    "smallMobileViewportWidthBreakpoint": 375,
+    "mediumTabletViewportWidthBreakpoint": 768,
+    "largeDesktopViewportWidthBreakpoint": 1440,
+    "xLargeDesktopViewportWidthBreakpoint": 1920
+  },
+  "projectId": "99jho1"
+}

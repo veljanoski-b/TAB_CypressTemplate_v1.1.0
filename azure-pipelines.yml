@@ -1,0 +1,41 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  - group: 'cypress-variables'
+
+jobs:
+  - job: 'build_and_test'
+    displayName: 'Build and Test the Cypress tests'
+
+    ##
+    # 📇 Prepare Node
+    ##
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
+
+      - task: Npm@1
+        inputs:
+          command: 'ci'
+        displayName: 'NPM CI'
+
+        ##
+        # 🧪 Run Tests
+        ##
+      - task: CmdLine@2
+        displayName: 'NPM RUN TESTS'
+        inputs:
+          script: >
+            npx cypress run --browser chrome
+            --env winerack-user=$(winerack-user),winerack-password=$(winerack-password)

@@ -1,0 +1,4 @@
+dist/
+chimp.js
+package.json
+package-lock.json
