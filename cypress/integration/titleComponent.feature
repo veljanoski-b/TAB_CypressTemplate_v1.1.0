@@ -2,7 +2,7 @@ Feature: Title Component
 
   Scenario: Title Component Alignment
 
-    Given User opens the Title Component Page
+    Given I open the Title Component Page
 
     And I check the Left Alignment
 
@@ -12,7 +12,7 @@ Feature: Title Component
 
   Scenario: Title Component Heading
 
-    Given User opens the Title Component Page
+    Given I open the Title Component Page
 
     And I check the Heading 1
 
@@ -28,7 +28,7 @@ Feature: Title Component
 
   Scenario: Title Component Heading Negative
 
-    Given User opens the Title Component Page
+    Given I open the Title Component Page
 
     And I check the Heading Negative
 
