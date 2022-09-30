@@ -11,13 +11,13 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
 
   // Checking of the Alignment of the Title Component
 
-  Given('I open the Title Component Page', () => {
+  Given('User opens the Title Component Page', () => {
 
     cy.visit(getBaseUrl().concat('/en-aa-sample/editorial/general-components/title-component'));
 
   });
 
-  And('I check the Left Alignment', () => {
+  And('Checks the Left Alignment', () => {
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.alignment(ALIGNMENTS.LEFT)).should('be.visible')
     }
@@ -27,7 +27,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  And('I check the Right Alignment', () => {
+  And('Checks the Right Alignment', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.alignment(ALIGNMENTS.RIGHT)).should('be.visible')
@@ -38,7 +38,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  Then('I check the Center Alignment', () => {
+  Then('Checks the Center Alignment', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.alignment(ALIGNMENTS.CENTER)).should('be.visible')
@@ -51,7 +51,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
 
   // Checking the Heading of the Title Component-Heading
 
-  And('I check the Heading 1', () => {
+  And('Checks the Heading 1', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(1)).contains('Title Heading H1').should('be.visible')
@@ -62,7 +62,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  And('I check the Heading 2', () => {
+  And('Checks the Heading 2', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(2)).contains('Title Heading H2').should('be.visible')
@@ -73,7 +73,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  And('I check the Heading 3', () => {
+  And('Checks the Heading 3', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(3)).contains('Title Heading H3').should('be.visible')
@@ -84,7 +84,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  And('I check the Heading 4', () => {
+  And('Checks the Heading 4', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(4)).contains('Title Heading H4').should('be.visible')
@@ -95,7 +95,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  And('I check the Heading 5', () => {
+  And('Checks the Heading 5', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(5)).contains('Title Heading H5').should('be.visible')
@@ -106,7 +106,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
     }
   })
 
-  Then('I check the Heading 6', () => {
+  Then('Checks the Heading 6', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(6)).contains('Title Heading H6').should('be.visible')
@@ -119,7 +119,7 @@ describe(describeConstructor.size(Object.values) + " " + 'Title Component', func
 
   //  Negative Scenario Heading check 
 
-  Then('I check the Heading Negative', () => {
+  Then('Checks the Heading Negative', () => {
 
     if (isXLbreakPoint() || isLbreakPoint()) {
       cy.get(title.heading(1)).contains('Title Heading H2').should('be.visible')
